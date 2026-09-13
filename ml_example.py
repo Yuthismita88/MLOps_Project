@@ -4,6 +4,7 @@ from sklearn.model_selection import train_test_split
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import accuracy_score
 from sklearn.metrics import f1_score
+from sklearn.metrics import confusion_matrix
 
 
 
@@ -41,3 +42,14 @@ f1 = f1_score(y_test, y_pred, average='macro')
 
 # Print the F1 score
 print("F1_score is:", f1)
+
+# Calculate confusion matrix
+cm = confusion_matrix(y_test, y_pred)
+
+# Print the confusion matrix
+print("\nConfusion Matrix:")
+print(cm)
+print("\nIndividual elements of the confusion matrix:")
+print(f'True Positives (Class 0): {cm[0][0]}')
+print(f'True Positives (Class 1): {cm[1][1]}')
+print(f'True Positives (Class 2): {cm[2][2]}')
