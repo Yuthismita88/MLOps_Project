@@ -53,3 +53,5 @@ print("\nIndividual elements of the confusion matrix:")
 print(f'True Positives (Class 0): {cm[0][0]}')
 print(f'True Positives (Class 1): {cm[1][1]}')
 print(f'True Positives (Class 2): {cm[2][2]}')
+
+print("This print statement is added to check if the code is running properly or not")
